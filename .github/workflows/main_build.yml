@@ -1,0 +1,17 @@
+name: build pdf
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set up Git repository
+        uses: actions/checkout@v2
+      - name: compile LaTeX document
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
+      - name: upload pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: main.pdf
