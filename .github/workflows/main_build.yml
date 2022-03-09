@@ -1,7 +1,13 @@
 name: build pdf
-on: [push, pull_request, workflow_dispatch]
-  branches:
-    - 'master'
+# on: [push, pull_request, workflow_dispatch]
+on:
+  pull_request:
+    branches:
+      - 'master'
+  push:
+    branches:
+      - 'master'
+  workflow_dispatch:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -17,3 +23,4 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+
