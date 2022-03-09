@@ -1,5 +1,7 @@
 name: build pdf
 on: [push, pull_request, workflow_dispatch]
+  branches:
+    - 'master'
 jobs:
   build_latex:
     runs-on: ubuntu-latest
