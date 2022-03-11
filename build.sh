@@ -1,23 +1,38 @@
 #!/bin/bash
 
 start=`date +%s.%N`
+
 built=false
-while getopts "fql" opt; do
+open_pdf=false
+
+while getopts "fqko" opt; do
 	case $opt in
 		f)
 			echo "full compilation"
 			echo "----------------"
 			echo -n "pdflatex...     "
 			pdflatex -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
+			if [ "$?" != 0 ] ; then
+				echo "pdflatex encountered an error"
+				exit 1
+			fi
 			echo "done"
 			echo -n "biber...        "
 			biber main > /dev/null 2>&1
 			echo "done"
 			echo -n "pdflatex...     "
 			pdflatex -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
+			if [ "$?" != 0 ] ; then
+				echo "pdflatex encountered an error"
+				exit 1
+			fi
 			echo "done"
 			echo -n "pdflatex...     "
 			pdflatex -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
+			if [ "$?" != 0 ] ; then
+				echo "pdflatex encountered an error"
+				exit 1
+			fi
 			echo "done"
 			built=true
 			;;
@@ -26,12 +41,18 @@ while getopts "fql" opt; do
 			echo "-----------------"
 			echo -n "pdflatex...     "
 			pdflatex -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
+			if [ "$?" != 0 ] ; then
+				echo "pdflatex encountered an error"
+				exit 1
+			fi
 			echo "done"
 			built=true
 			;;
 		k)
-			echo "keeping output files"
 			remove_intermediate_files=false
+			;;
+		o)
+			open_pdf=true
 			;;
 		\?)
 			echo "invalid option: -$opt"
@@ -46,6 +67,7 @@ if [ "$built" ==  false ] ; then
 	echo "-q for quick compilaton"
 	echo "-f for full compilation"
 	echo "-k to keep intermediate files"
+	echo "-o to open pdf after build"
 	exit 0
 fi
 
@@ -58,3 +80,7 @@ fi
 end=`date +%s.%N`
 echo -n "runtime: "
 echo $( echo "$end - $start" | bc -l )
+
+if $open_pdf ; then
+	evince main.pdf
+fi
