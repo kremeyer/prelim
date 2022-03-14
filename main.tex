@@ -53,8 +53,9 @@ pdfpagelayout=TwoPageRight
 \setstretch{1.43} %line spacing
 \captionsetup[figure]{font={stretch=1.15}}
 \captionsetup[table]{font={stretch=1.15}}
-% \renewcaptionname{{\figurename}{\bfseries{Fig.}}
-% \renewcaptionname{{\tablename}{\bfseries{Tab.}}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=colon}
+\captionsetup[table]{labelfont={bf},name={Tab.},labelsep=colon}
 \setcapindent{0em}
 \setlength\abovecaptionskip{6pt} %spacing between table and it's title
 \raggedbottom
@@ -62,11 +63,12 @@ pdfpagelayout=TwoPageRight
 
 \newcommand{\e}{\mathrm{e}}
 \renewcommand{\i}{\mathrm{i}}
-\newcommand{\ts}{TiSe\textsubscript{2}~}
+\newcommand{\ts}{TiSe\textsubscript{2}}
 
 \begin{document}
 \begin{acronym}
 \acro{TMD}{transition-metal dichalcogenide}
+\acro{BZ}{brillouin zone}
 \end{acronym}
 \input{content/review}
 \end{document}
