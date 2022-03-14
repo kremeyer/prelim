@@ -11,7 +11,7 @@ while getopts "fqko" opt; do
 			echo "full compilation"
 			echo "----------------"
 			echo -n "pdflatex...     "
-			pdflatex -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
+			pdflatex -draftmode -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
 			if [ "$?" != 0 ] ; then
 				echo "pdflatex encountered an error"
 				exit 1
@@ -21,7 +21,7 @@ while getopts "fqko" opt; do
 			biber main > /dev/null 2>&1
 			echo "done"
 			echo -n "pdflatex...     "
-			pdflatex -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
+			pdflatex -draftmode -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
 			if [ "$?" != 0 ] ; then
 				echo "pdflatex encountered an error"
 				exit 1
