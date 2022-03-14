@@ -1,21 +1,14 @@
-\documentclass[letterpaper, 11pt, twoside, captions=tableheading]{scrartcl}
+\documentclass[draft, letterpaper, 11pt, twoside, captions=tableheading]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[default]{sourceserifpro}
 \usepackage[nosfdefault]{sourcesanspro}
-\usepackage{multirow}
-\usepackage[style=phys, biblabel=brackets, maxbibnames=2, minbibnames=1, sortlocale=de_DE, doi=false, isbn=false, url=false, doi=false, backend=biber, sorting=none, backref=false]{biblatex}
-\DeclareFieldFormat[article]{citetitle}{#1\midsentence}
-\DeclareFieldFormat[article]{title}{#1\midsentence}
-\DeclareFieldFormat[book]{title}{#1\midsentence}
-\DeclareFieldFormat[online]{title}{#1\midsentence}
-\addbibresource{refs.bib}
 \usepackage{amsmath}
-\usepackage{relsize}
 \usepackage{amssymb}
 \usepackage{amsbsy}
 \usepackage{amsthm}
 \usepackage{upgreek}
 \usepackage{graphicx}
+\usepackage{multirow}
 \usepackage{geometry}
 \geometry{
   left=3.045cm,
@@ -24,14 +17,8 @@
   bottom=3cm,
   showframe=true,
 }
-\usepackage{array}
-\usepackage{rotating}
-\usepackage{float}
-\usepackage[vflt]{floatflt}
-\usepackage{framed}
-\usepackage{wrapfig}
-\usepackage{enumitem}
-\usepackage{soul}
+\usepackage{setspace}
+\setstretch{1.5} %line spacing
 \usepackage{hyperref}
 \hypersetup{
 colorlinks,
@@ -46,18 +33,20 @@ pdfcreator=Laurenz Kremeyer,
 pdfdisplaydoctitle=true,
 pdfpagelayout=TwoPageRight
 }
-\usepackage{upgreek}
+\usepackage[style=phys, biblabel=brackets, maxbibnames=2, minbibnames=1, sortlocale=de_DE, doi=false, isbn=false, url=false, doi=false, backend=biber, sorting=none, backref=false]{biblatex}
+\DeclareFieldFormat[article]{citetitle}{#1\midsentence}
+\DeclareFieldFormat[article]{title}{#1\midsentence}
+\DeclareFieldFormat[book]{title}{#1\midsentence}
+\DeclareFieldFormat[online]{title}{#1\midsentence}
+\addbibresource{refs.bib}
 \usepackage[nolist]{acronym}
-\usepackage{caption}
-\usepackage{setspace}
-\setstretch{1.43} %line spacing
-\captionsetup[figure]{font={stretch=1.15}}
-\captionsetup[table]{font={stretch=1.15}}
 \usepackage{caption}
 \captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=colon}
 \captionsetup[table]{labelfont={bf},name={Tab.},labelsep=colon}
+\captionsetup[figure]{font={stretch=1.15}}
+\captionsetup[table]{font={stretch=1.15}}
 \setcapindent{0em}
-\setlength\abovecaptionskip{6pt} %spacing between table and it's title
+\setlength\abovecaptionskip{6pt} %spacing between table and its title
 \raggedbottom
 \emergencystretch=20em
 
