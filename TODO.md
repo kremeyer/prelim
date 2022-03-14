@@ -1,0 +1,3 @@
+- add vectors to fig:crystal
+- fix L/K-points
+- align unit cett and bz
