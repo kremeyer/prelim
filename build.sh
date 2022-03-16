@@ -5,8 +5,13 @@ start=`date +%s.%N`
 built=false
 open_pdf=false
 
-while getopts "fqko" opt; do
+while getopts "fqkoc" opt; do
 	case $opt in
+		c)
+			echo -n "cleaning up...  "
+			rm main.aux main.bbl main.bcf main.blg main.out main.run.xml main.synctex.gz > /dev/null 2>&1
+			echo "done"
+			;;
 		f)
 			echo "full compilation"
 			echo "----------------"
@@ -62,8 +67,9 @@ while getopts "fqko" opt; do
 done
 
 if [ "$built" ==  false ] ; then
-	echo "nothing was done"
+	echo "nothing was built"
 	echo "flags:"
+	echo "-c for cleanup before build"
 	echo "-q for quick compilaton"
 	echo "-f for full compilation"
 	echo "-k to keep intermediate files"
