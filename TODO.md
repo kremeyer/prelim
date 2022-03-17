@@ -1,4 +1,4 @@
 - add vectors to fig:crystal
 - fix L/K-points
-- align unit cett and bz
+- align unit cell and bz
 - https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document
