@@ -1,4 +1,5 @@
 - add vectors to fig:crystal
 - fix L/K-points
 - align unit cell and bz
-- https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document
+- why plasmon softening
+- for procrastination: https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document
