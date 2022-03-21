@@ -11,9 +11,15 @@ Both, excitation and probe event, are required to be shorter than the time scale
 If the phenomenon under study is reversable and there is enough time between each excitation event, a measurement can be done continiously on one sample.
 Current plans do not involve studying irreversible phenomena.
 
+\begin{figure}[!t]
+	\includegraphics[width=\columnwidth]{figs/method.pdf}
+	\caption{\textbf{a)}\,Working principal of \acs{UEDS}. The laser pump pulse arrives at the sample, followed by the electron probe pulse with a time delay of $\tau$. The electrons are scattered off of the sample and collected on the detector. For one pixel on the detector the scattering vector $\mathbf{q}$, its reduced wave vector $\mathbf{k}$ and the closest Bragg reflection $\mathbf{H}$ are shown. One-phonon structure factors of the longitudinal (\textbf{b}) and transverse (\textbf{c}) acoustic modes in the high temperature phase of \ts.}
+	\label{fig:method}
+\end{figure}
+
 \textbf{UED/UEDS}
 
-Building on the idea one can combine classical electron diffraction experiments and femtosecond laser systems and conduct \ac{UED} and \ac{UEDS} experiments.
+Building on the idea of the pump-probe scheme one can combine classical electron diffraction experiments and femtosecond laser systems and conduct \ac{UED} and \ac{UEDS} experiments.
 
 The experimental apparatus starts with a commercial Ti:sapphire laser system emitting $\sim$35\,fs laser pulses with a center wavelength of 800\,nm, that are split and guided onto different beam path.
 For sample excitation one part of the pulse is attenuated and guided onto the sample.
@@ -22,15 +28,26 @@ The final pulse is guided onto a photocathode in vacuum, where the electron bunc
 The electron bunch is accelerated to 90\,keV by a static electric field and focused onto the sample.
 On its way to the sample the electron bunch will broaden considerably due to Coulomb repulsion, effectively limiting the time resolution of the experiments.
 To compensate for this effect the electron bunches are recompressed in a radio-frequency driven davity between the electron gun and the sample.
+A schematic representation is shown in shown in figure~\ref{fig:method}\,a:
+Laser pump and electron probe pulse arrive at the sample with a time delay of $\tau$.
+The scattering patterns are collected in a transmission geometry and verying the time delay allows to capture dynamics of the studied system.
 
-The datasets collected on the detector are incredibly rich and contain information about wave-vector-dependent dynamics of the phonon system across the whole \ac{BZ}.
-The total scattering intensity collected on the detector in the kinematical approximation is
+The datasets collected are incredibly rich and contain information about wave-vector-dependent dynamics of the phonon system across the whole \ac{BZ}.
+The total scattering intensity collected on the detector is in the kinematical approximation
 \[ I(\mathbf{q},t) = \sum_n I_n(\mathbf{q},t)\enspace\text{with}\enspace n \in\mathbb{N},\]
-with the scattered intensities $I_n$ of an electron that scattererd with $n$ phonons.
+with the scattered intensities $I_n$ of an electron that scattererd with $n$ phonons at scattering vector $\mathbf{q}$ at time $t$.
+The contribution the the scattered intensity decreases rapidly for higher order terms, hence only the first two terms will be discussed.
 
-\[ I_0(\mathbf{q}, t) \propto \left| \sum_s f_s(\mathbf{q}) \e^{-W_s(\mathbf{q},t)} \e^{-\i[\mathbf{q}\cdot\mathbf{R}_s(t)]} \right| ^2 \]
+The first term describes the intensity of the electrons diffraction into Bragg spots with the proportionality
+\[ I_0(\mathbf{q}, t) \propto \left| \sum_s f_s(\mathbf{q}) \e^{-W_s(\mathbf{q},t)} \e^{-\i[\mathbf{q}\cdot\mathbf{R}_s(t)]} \right| ^2.\]
+the sum expression is the so called geometric structure factor and contains the atomic form factor $f_s(\mathbf{q})$ (determined by the scattering potential of each atomic species), the Debye-Waller factor $\e^{-W_s(\mathbf{q},t)}$ and a phase factor $\e^{-\i[\mathbf{q}\cdot\mathbf{R}_s(t)]}$ with the atomic position in the unit cell $\mathbf{R}_s(t)$.
+The real space structure of the sample cannot be calculated from the diffraction, since the phase factor information is lost due to the absolute square.
+Information about thermal motion of the atoms is encoded in the Debye-Waller factor.
+It is propotional to the mean square atomic displacement of the atoms around their equilibrium position and leads to an intensity reduction of the Bragg spots.
 
-\[ I_1(\mathbf{q},t) \propto \sum_i \frac{n_i(\mathbf{k})+\frac{1}{2}}{\omega_i(\mathbf{k})}\,\left| \sum_s \e^{-W_s(\mathbf{q},t)} \frac{f_s(\mathbf{q})}{\sqrt{\mu_s}} \left( \mathbf{q}\cdot\mathbf{e}_{i, s}(\mathbf{k}) \right) \right|^2 \]
+To track the phonon dynamics in more detail, namely in energy, momentum and time, one must also consider the intensity of scattering event involving a single phonon
+
+\[ I_1(\mathbf{q},t) \propto \sum_i \frac{n_i(\mathbf{k})+\frac{1}{2}}{\omega_i(\mathbf{k})}\,\left| F_{1,i}(\mathbf{q},t) \right|^2 = \sum_i \frac{n_i(\mathbf{k})+\frac{1}{2}}{\omega_i(\mathbf{k})}\,\left| \sum_s \e^{-W_s(\mathbf{q},t)} \frac{f_s(\mathbf{q})}{\sqrt{\mu_s}} \left( \mathbf{q}\cdot\mathbf{e}_{i, s}(\mathbf{k}) \right) \right|^2.\]
 
 %capabilities of the machine
 %description and discussion of observable
