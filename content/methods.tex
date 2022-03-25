@@ -12,9 +12,9 @@ If the phenomenon under study is reversable and there is enough time between eac
 Current plans do not involve studying irreversible phenomena.
 
 \begin{figure}[!t]
-	\includegraphics[width=\columnwidth]{figs/method_placeholder.jpg}
+	\includegraphics[width=\columnwidth]{figs/ued.pdf}
 	\caption{\textbf{a)}\,Working principal of \acs{UEDS}. The laser pump pulse arrives at the sample, followed by the electron probe pulse with a time delay of $\tau$. The electrons are scattered off of the sample and collected on the detector. For one pixel on the detector the scattering vector $\mathbf{q}$, its reduced wave vector $\mathbf{k}$ and the closest Bragg reflection $\mathbf{H}$ are shown. One-phonon structure factors of the longitudinal (\textbf{b}) and transverse (\textbf{c}) acoustic modes in the high temperature phase of \ts.}
-	\label{fig:method}
+	\label{fig:ued}
 \end{figure}
 
 \textbf{UED/UEDS}
@@ -28,7 +28,7 @@ The final pulse is guided onto a photo cathode in vacuum, where the electron bun
 The electron bunch is accelerated to 90\,keV by a static electric field and focused onto the sample.
 On its way to the sample the electron bunch will broaden considerably due to Coulomb repulsion, effectively limiting the time resolution of the experiments.
 To compensate for this effect the electron bunches are re-compressed in a radio-frequency driven cavity between the electron gun and the sample.
-A schematic representation is shown in shown in figure~\ref{fig:method}\,a:
+A schematic representation is shown in shown in figure~\ref{fig:ued}:
 Laser pump and electron probe pulse arrive at the sample with a time delay of $\tau$.
 The scattering patterns are collected in a transmission geometry and varying the time delay allows to capture dynamics of the studied system.
 
@@ -53,6 +53,12 @@ The index of the outer sum $i$ runs over all phonon modes populations $\{n_{i,\m
 $\left| F_{1,i}(\mathbf{q},t) \right|^2$ is the one-phonon structure factor and weighs the contribution of each phonon mode $j$ to the first order diffuse scattering intensity.
 In full the one-phonon structure factor is written on the RHS of equation~\ref{eq:I1} with index $s$ running over the atoms in the unit cell and the Debye-Waller and the atomic form factors from equation~\ref{eq:I0} and the atomic masses $\{\mu_s\}$ and the phononic polarization vectors $\{\mathbf{e}_{i, s}(\mathbf{k})\}$.
 
+\begin{figure}[!t]
+	\includegraphics[width=\columnwidth]{figs/ops.pdf}
+	\caption{One-phonon structure factor of the longitudinal~(\textbf{a}) and transverse~(\textbf{c}) acoustic phonon modes in the high temperature phase of \ts over reciprocal space. Withe dots mark $\Gamma$ points and white lines mark \ac{BZ} edges. \textbf{b})~Phonon dispersion of the along the high-symmetry path $\overline{\Gamma\mathrm{MK}\Gamma}$. The graphs colors are visualizing the value of the corresponding one-phonon structure factor for every point in reciprocal space, taken from the \ac{BZ} marked by black edges in \textbf{a} and \textbf{c}. The single \ac{BZ} inset is showing the cut through the \ac{BZ} with a red line.}
+	\label{fig:ops}
+\end{figure}
+
 To track the flow of energy in the sample after optical excitation and access to the changes population dynamics across the \ac{BZ} is important.
 In order to derive $\{n_{i,\mathbf{k}}\}(t))$ from the first-order diffuse scattering intensity, one must obtain knowledge of the one-phonon scattering factors and the phonon frequencies.
 A extensive description on how to calculate the $\left| F_{1,i}(\mathbf{q},t) \right|^2$ and finally electron-phonon coupling constants is presented in~\cite{stern2018,renedecotret2019}.
@@ -70,10 +76,12 @@ Employing the so called nonthermal lattice model\cite{waldecker2016} (a set of c
 In 2021 Zacharias et~al. published methods to extend the presented calculation to multi-phonon structure factors of orders $n\geq 2$ (see equation~\ref{eq:I}).
 Further they compare the theoretical results with experimental data on different 2D-materials, including \acp{TMD}, showing good agreement\cite{zacharias2021a,zacharias2021b}.
 
+%describe normal incidence electrons and bz plane
+%sample preparation -> good for UED
 %capabilities of the machine
+%operates in vacuum
 %epc
 % photoexcitation absorbed by electrons
 % electrons couple to phonons -> heat
-%samples are easy to use
 %peak width <-> correlation length
 %multi-phonon structure calculation
