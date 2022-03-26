@@ -14,8 +14,8 @@
 \geometry{
   left=3.045cm,
   right=2.045cm,
-  top=3cm,
-  bottom=3cm,
+  top=3.5cm,
+  bottom=3.5cm,
   showframe=true,
 }
 \usepackage{setspace}
@@ -34,6 +34,17 @@ pdfcreator=Laurenz Kremeyer,
 pdfdisplaydoctitle=true,
 pdfpagelayout=TwoPageRight
 }
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE, RO]{Laurenz Kremeyer}
+\fancyhead[RE, LO]{McGill Physics PhD Preliminary Exam}
+\fancyfoot[LE, RO]{\thepage/\pageref{LastPage}}
+\fancypagestyle{title}{
+    \fancyhf{}
+    \fancyfoot[LE, RO]{\thepage/\pageref{LastPage}}
+}   
 \usepackage[style=phys, biblabel=brackets, maxbibnames=2, minbibnames=1, sortlocale=de_DE, doi=false, isbn=false, url=false, doi=false, backend=biber, sorting=none, backref=false]{biblatex}
 \DeclareFieldFormat[article]{citetitle}{#1\midsentence}
 \DeclareFieldFormat[article]{title}{#1\midsentence}
@@ -67,6 +78,11 @@ pdfpagelayout=TwoPageRight
 \acro{LA}{longitudinal acoustic}
 \acro{TA}{tansverse acoustic}
 \end{acronym}
+\thispagestyle{title}
+\begin{center}\begin{LARGE}{McGill Physics PhD Preliminary Exam}\end{LARGE}\end{center}
+\begin{center}\begin{Large}{Laurenz Kremeyer}\end{Large}\end{center}
+\input{content/intro}
+\begin{center}\rule{13cm}{0.5mm}\end{center}
 \input{content/review}
 \input{content/methods}
 \input{content/outlook}
