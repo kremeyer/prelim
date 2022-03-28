@@ -15,6 +15,7 @@ while getopts "fqkoc" opt; do
 		f)
 			echo "full compilation"
 			echo "----------------"
+			rm main.aux main.bbl main.bcf main.blg main.out main.run.xml main.synctex.gz > /dev/null 2>&1
 			echo -n "pdflatex...     "
 			pdflatex -draftmode -synctex=1 -interaction=nonstopmode main.tex > /dev/null 2>&1
 			if [ "$?" != 0 ] ; then
