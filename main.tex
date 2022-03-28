@@ -45,7 +45,7 @@ pdfpagelayout=TwoPageRight
     \fancyhf{}
     \fancyfoot[LE, RO]{\thepage/\pageref{LastPage}}
 }   
-\usepackage[style=phys, biblabel=brackets, maxbibnames=2, minbibnames=1, sortlocale=de_DE, doi=false, isbn=false, url=false, doi=false, backend=biber, sorting=none, backref=false]{biblatex}
+\usepackage[style=phys, biblabel=brackets, maxbibnames=2, minbibnames=1, sortlocale=de_DE, doi=false, isbn=false, url=false, backend=biber, sorting=none, backref=false]{biblatex}
 \DeclareFieldFormat[article]{citetitle}{#1\midsentence}
 \DeclareFieldFormat[article]{title}{#1\midsentence}
 \DeclareFieldFormat[book]{title}{#1\midsentence}
@@ -86,6 +86,6 @@ pdfpagelayout=TwoPageRight
 \input{content/review}
 \input{content/methods}
 \input{content/outlook}
-% \cleardoublepage
-% \printbibliography
+\cleardoublepage
+\printbibliography
 \end{document}
