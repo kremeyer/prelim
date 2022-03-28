@@ -1,0 +1,5 @@
+- add vectors to fig:crystal
+- why plasmon softening
+- check phonon mode names
+- why kinetic scattering theory?
+- for procrastination: https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document

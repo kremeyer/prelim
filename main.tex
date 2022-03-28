@@ -1,37 +1,25 @@
 \documentclass[letterpaper, 11pt, twoside, captions=tableheading]{scrartcl}
 \usepackage[utf8]{inputenc}
-\usepackage[default]{sourceserifpro}
-\usepackage[nosfdefault]{sourcesanspro}
-\usepackage{multirow}
-\usepackage[style=phys, biblabel=brackets, maxbibnames=2, minbibnames=1, sortlocale=de_DE, doi=false, isbn=false, url=false, doi=false, backend=biber, sorting=none, backref=false]{biblatex}
-\DeclareFieldFormat[article]{citetitle}{#1\midsentence}
-\DeclareFieldFormat[article]{title}{#1\midsentence}
-\DeclareFieldFormat[book]{title}{#1\midsentence}
-\DeclareFieldFormat[online]{title}{#1\midsentence}
-\addbibresource{refs.bib}
+\usepackage[default]{sourcesanspro}
+\usepackage{sfmath}
 \usepackage{amsmath}
-\usepackage{relsize}
 \usepackage{amssymb}
 \usepackage{amsbsy}
 \usepackage{amsthm}
 \usepackage{upgreek}
 \usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{textcomp} % degree symbol
 \usepackage{geometry}
 \geometry{
   left=3.045cm,
   right=2.045cm,
-  top=3cm,
-  bottom=3cm,
+  top=3.5cm,
+  bottom=3.5cm,
   showframe=true,
 }
-\usepackage{array}
-\usepackage{rotating}
-\usepackage{float}
-\usepackage[vflt]{floatflt}
-\usepackage{framed}
-\usepackage{wrapfig}
-\usepackage{enumitem}
-\usepackage{soul}
+\usepackage{setspace}
+\setstretch{1.5} %line spacing
 \usepackage{hyperref}
 \hypersetup{
 colorlinks,
@@ -40,29 +28,64 @@ filecolor=black,
 linkcolor=black,
 urlcolor=black,
 linktoc=all,
-pdftitle=,
+pdftitle=Physics PhD Preliminary Exam McGill,
 pdfauthor=Laurenz Kremeyer,
 pdfcreator=Laurenz Kremeyer,
 pdfdisplaydoctitle=true,
 pdfpagelayout=TwoPageRight
 }
-\usepackage{upgreek}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE, RO]{Laurenz Kremeyer}
+\fancyhead[RE, LO]{McGill Physics PhD Preliminary Exam}
+\fancyfoot[LE, RO]{\thepage/\pageref{LastPage}}
+\fancypagestyle{title}{
+    \fancyhf{}
+    \fancyfoot[LE, RO]{\thepage/\pageref{LastPage}}
+}   
+\usepackage[style=phys, biblabel=brackets, maxbibnames=2, minbibnames=1, sortlocale=de_DE, doi=false, isbn=false, url=false, doi=false, backend=biber, sorting=none, backref=false]{biblatex}
+\DeclareFieldFormat[article]{citetitle}{#1\midsentence}
+\DeclareFieldFormat[article]{title}{#1\midsentence}
+\DeclareFieldFormat[book]{title}{#1\midsentence}
+\DeclareFieldFormat[online]{title}{#1\midsentence}
+\addbibresource{refs.bib}
 \usepackage[nolist]{acronym}
 \usepackage{caption}
-\usepackage{setspace}
-\setstretch{1.43} %line spacing
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=colon}
+\captionsetup[table]{labelfont={bf},name={Tab.},labelsep=colon}
 \captionsetup[figure]{font={stretch=1.15}}
 \captionsetup[table]{font={stretch=1.15}}
-% \renewcaptionname{{\figurename}{\bfseries{Fig.}}
-% \renewcaptionname{{\tablename}{\bfseries{Tab.}}
 \setcapindent{0em}
-\setlength\abovecaptionskip{6pt} %spacing between table and it's title
+\setlength\abovecaptionskip{6pt} %spacing between table and its title
 \raggedbottom
 \emergencystretch=20em
 
 \newcommand{\e}{\mathrm{e}}
 \renewcommand{\i}{\mathrm{i}}
+\newcommand{\ts}{TiSe\textsubscript{2}}
 
 \begin{document}
-sample document\cite{test}
+\begin{acronym}
+\acro{TMD}{transition-metal dichalcogenide}
+\acro{BZ}{Brillouin zone}
+\acro{CDW}{charge-density wave}
+\acro{PLD}{periodic lattice distortion}
+\acro{DFT}{density functional theory}
+\acro{UEDS}{ultrafast electron diffuse scattering}
+\acro{UED}{ultrafast electron diffraction}
+\acro{LA}{longitudinal acoustic}
+\acro{TA}{tansverse acoustic}
+\end{acronym}
+\thispagestyle{title}
+\begin{center}\begin{LARGE}{McGill Physics PhD Preliminary Exam}\end{LARGE}\end{center}
+\begin{center}\begin{Large}{Laurenz Kremeyer}\end{Large}\end{center}
+\input{content/intro}
+\begin{center}\rule{13cm}{0.5mm}\end{center}
+\input{content/review}
+\input{content/methods}
+\input{content/outlook}
+% \cleardoublepage
+% \printbibliography
 \end{document}
