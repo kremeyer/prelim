@@ -4,34 +4,34 @@ These techniques allow to probe different observables on femtosecond timescales,
 
 \subsection{Pump-probe Experiments}
 A simple concept to reach high time resolutions is the pump-prope technique.
-The basic idea is that an excitation event (pump) and a probe event with a known variable time difference occur on the sample under investigation.
+The basic idea is that an excitation (pump) event and a probe event with a known variable time difference occur on the sample under investigation.
 The excitation event may be an arriving optical laser pulse and the probe event might be the scattering of an electron or X-ray pulse.
-If probe-events are measured while continiously varying the time delay the data can be assembled into a \emph{movie}.
+If probe-events are measured while continiously varying the time delay, the data can be assembled into a \emph{movie}.
 Both, excitation and probe event, are required to be shorter than the time scale of the pheonomenon under investigation.
 If the phenomenon under study is reversable and there is enough time between each excitation event, a measurement can be done continiously on one sample.
 Current plans do not involve studying irreversible phenomena.
 
 \begin{figure}[!t]
 	\includegraphics[width=\columnwidth]{figs/ued.pdf}
-	\caption{Schematic of the UED/UEDS experiment with Photocathode~(PC), two electromagnetic Lenses~(L), compression cavity~(CC) and sample~(S). The 266\,nm ultra-violet laser pulse hits the photocathode emmiting elecrons that are accelerated by a static electric fields towards the sample. Two lenses and the cavity focus and compress the electron bunches onto the sample where they are diffracted. The 800\,nm pump pulse arrives at the sample with variable time delay and photoexcites is. The vectors on the scattering are the scattering vector~$\mathbf{q}$ and the reduced wave vector~$\mathbf{k}$ and the position of the closest Bragg spot $\mathbf{H}$.}
+	\caption{Schematic of the UED/UEDS experiment with Photocathode~(PC), two electromagnetic Lenses~(L), compression cavity~(CC) and sample~(S). The 266\,nm ultra-violet laser pulse hits the photocathode emmiting elecrons that are accelerated by a static electric fields towards the sample. Two lenses and the cavity focus and compress the electron bunches onto the sample where they are diffracted. The 800\,nm pump pulse arrives at the sample with variable time delay and photoexcites it. The vectors on the diffraction image are the scattering vector~$\mathbf{q}$, the reduced wave vector~$\mathbf{k}$ and the position of the closest Bragg spot $\mathbf{H}$.}
 	\label{fig:ued}
 \end{figure}
 
 \subsection{Ultrafast Electron Diffraction and Ultrafast Electron Diffuse Scattering}
-Building on the idea of the pump-probe scheme one can combine classical electron diffraction experiments and femtosecond laser systems and conduct \ac{UED} and \ac{UEDS} experiments.
+Building on the idea of the pump-probe scheme one can combine classical electron diffraction experiments and femtosecond laser systems to conduct \ac{UED} and \ac{UEDS} experiments.
 
 \subsubsection*{Experimental Setup}
-The experimental apparatus starts with a commercial Ti:sapphire laser system emitting $\sim$35\,fs laser pulses with a center wavelength of 800\,nm, that are split and guided onto different beam path.
-For sample excitation one part of the pulses is attenuated and guided onto the sample.
+The experimental apparatus starts with a commercial Ti:sapphire laser system emitting $\sim$35\,fs laser pulses at a repitition rate of 1\,kHz with a center wavelength of 800\,nm, that are split and guided onto different beam path.
+For sample excitation, one part of the pulses is attenuated and guided onto the sample.
 The second part of the pulses are entering the probe beam path and are frequency doubled. The fundamental and frequency doubled pulses are converted to a pulse with a center wavelength of 266\,nm by frequency summation.
 The final pulse is guided into the vacuum part of the apparatus that is depicted in figure~\ref{fig:ued}.
-It first hits the photo cathode , where the electron bunch that is scattered from the sample is being created.
+It first hits the photo cathode , where the electron bunch that will later be scattered from the sample is being created.
 The electron bunch is accelerated to 90\,keV by a static electric field and focused onto the sample.
 On its way to the sample the electron bunch broadens considerably due to Coulomb repulsion, effectively limiting the time resolution of the experiments.
 The dispersion of the electron bunch is inherently linear; fast electrons are in front, while slow electrons are in the back.
-To compensate for the broadening the electron bunches are re-compressed in a radio-frequency driven cavity between the electron gun and the sample.
+To compensate for the broadening the electron bunches are compressed in a radio-frequency driven cavity between the electron gun and the sample.
 While passing the cavity the electric field decelerates the electrons in the front and accelerates the electrons in the back.
-Center electrons experience no energy change, since the radio-frequency field is zero and changes sign at that exact moment.
+Center electrons experience no energy change, since the radio-frequency field changes sign and is zero at that exact moment.
 The electron bunch leaving the cavity now has a reverse linear dispersion and re-compresses while it is traveling through the instrument.
 The point of maximum compression occurs right at the sample to achieve maximum time resolution.
 Photoexcitation happens upon arrival of the 800\,nm pump pulse before probing sample with the compressed electron bunch.
@@ -50,13 +50,14 @@ Time-resolved experiments will still be very much feasible, albeit with a limite
 \subsubsection*{Information Encoded in Scattering Data}
 The datasets collected are incredibly rich and contain information about wave-vector-dependent dynamics of the phonon system across the whole \ac{BZ}.
 The total scattering intensity collected on the detector is in the kinematic approximation
-\begin{equation} I(\mathbf{q},t) = \sum_n I_n(\mathbf{q},t)\enspace\text{with}\enspace n \in\mathbb{N},\label{eq:I}\end{equation}
+\begin{equation} I(\mathbf{q},t) = \sum_n I_n(\mathbf{q},t)\enspace\text{with}\enspace n \in\mathbb{N}^0,\label{eq:I}\end{equation}
 with the scattered intensities $I_n$ of an electron that scattered with $n$ phonons at scattering vector $\mathbf{q}$ at time~$t$.
 The contribution to the scattered intensity decreases rapidly for higher order terms, hence only the first two terms will be discussed in detail.
 
 The first term describes the intensity of the electrons diffracted into Bragg spots with the proportionality
 \begin{equation} I_0(\mathbf{q}, t) \propto \left| \sum_s f_s(\mathbf{q}) \e^{-W_s(\mathbf{q},t)} \e^{-\i[\mathbf{q}\cdot\mathbf{R}_s(t)]} \right| ^2.\label{eq:I0}\end{equation}
-The sum expression is the so called geometric structure factor and contains the atomic form factors $\{f_s(\mathbf{q})\}$ determined by the scattering potential of each atomic species. Other term are the Debye-Waller factors $\{\e^{-W_s(\mathbf{q},t)}\}$ and phase factors $\{\e^{-\i[\mathbf{q}\cdot\mathbf{R}_s(t)]}\}$ with the atomic positions in the unit cell $\{\mathbf{R}_s(t)\}$, $s$ is running over the atoms in the unit cell.
+The sum expression is the so called geometric structure factor and contains the atomic form factors $\{f_s(\mathbf{q})\}$ determined by the scattering potential of each atomic species.
+Other terms are the Debye-Waller factors $\{\e^{-W_s(\mathbf{q},t)}\}$ and phase factors $\{\e^{-\i[\mathbf{q}\cdot\mathbf{R}_s(t)]}\}$ with the atomic positions in the unit cell $\{\mathbf{R}_s(t)\}$, $s$ is running over the atoms in the unit cell.
 The real space structure of the sample cannot be calculated from the experimental data, since the phase factor information is lost due to the absolute square.
 Information about thermal motion of the atoms is encoded in the Debye-Waller factor.
 It is proportional to the mean square atomic displacement of the atoms around their equilibrium position, thus containing information on all phonon modes, but it is not possible to disentangle them.
@@ -79,12 +80,12 @@ A extensive description on how to calculate the $\left| F_{1,i}(\mathbf{q},t) \r
 \end{figure}
 
 In summary: \Ac{DFT} calculations and clustering algorithms are used to obtain the polarization $\mathbf{e}_{i,s,\mathbf{k}}$ and frequency $\omega_{i,\mathbf{k}}$ of phonon states across the \ac{BZ} and sort them into branches.
-Any transient changes in the Debye-Waller factor are negligible and therefore they can be obtained from the static phonon polarizations previously calculated by the \ac{DFT} calculation.
+Any transient changes in the Debye-Waller factor are negligible and therefore they can be obtained from the static phonon polarizations calculated by the \ac{DFT} calculation.
 The calculations were carried out for the high temperature phase of \ts at room temperature and parts of the result are shown in figure~\ref{fig:ops}.
 Panel~a~and~c show the one-phonon structure factor across multiple \acp{BZ} for the \ac{LA} and \ac{TA} mode respectively.
 Frequencies of both modes across the high-symmetry path $\overline{\Gamma\mathrm{MK}\Gamma}$ are reported in panel~b.
 Encoded in the color of the lines is the value of the one-phonon structure factor in the \acp{BZ} with the black borders.
-Lets discuss the implications of the scalar product $\left( \mathbf{q}\cdot\mathbf{e}_{i, s}(\mathbf{k}) \right)$ in equation~\ref{eq:I1} on the structure factors of longitudinal and transverse phonon modes qualitatively.
+Lets discuss the implications of the scalar product $\left( \mathbf{q}\cdot\mathbf{e}_{i, s}(\mathbf{k}) \right)$ in equation~\ref{eq:I1} for the structure factors of longitudinal and transverse phonon modes qualitatively.
 For transverse phonon modes the structure factor is large from the $\Gamma$ point along the azimuthal direction, because the mode polarization is perpendicular to $\mathbf{q}$.
 Vice versa the polarization of the longitudinal modes is parallel to $\mathbf{q}$ and the structure factor exhibits prominent features radially.
 With the frequencies and one-phonon structure factor on hand the derivation of the phonon populations $\{n_{i,\mathbf{k}}(t)\}$ is straightforward.
