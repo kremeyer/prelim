@@ -1,5 +1,3 @@
-# TOC
-
 # regulations
 
 - to be submitted "approximately" six weeks before oral exam
@@ -11,12 +9,3 @@
 - feedback of adequacy within two weeks after submission
 	- may contain corrections to be made
 	- contains topics for the oral exam
-
-# pixel graphics guide
-
-| dpi  | half col | full col |
-|      | 82.5 mm  |  165 mm  |
-|------|----------|----------|
-|  300 | 975      | 1950     |
-|  600 | 1950     | 3900     |
-| 1200 | 3900     | 6800     |
