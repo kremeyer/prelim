@@ -7,3 +7,6 @@ observables on
 femtosecond
 phononic
 polarizations
+chalcogens
+azimuthal
+anharmonic
