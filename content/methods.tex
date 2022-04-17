@@ -58,7 +58,7 @@ Contribution to the scattered intensity decreases rapidly for higher order terms
 The first term describes the intensity of the electrons diffracted into Bragg spots with the proportionality
 \begin{equation} I_0(\mathbf{q}, t) \propto \left| \sum_s f_s(\mathbf{q}) \e^{-W_s(\mathbf{q},t)} \e^{-\i[\mathbf{q}\cdot\mathbf{R}_s(t)]} \right| ^2.\label{eq:I0}\end{equation}
 The sum expression is the so-called geometric structure factor and contains the atomic form factors $\{f_s\}$ determined by the scattering potential of each atomic species.
-Other terms are the Debye-Waller factors $\{\e^{-W_s}\}$ and phase factors $\{\e^{-\i[\mathbf{q}\cdot\mathbf{R}_s]}\}$ with the atomic positions in the unit cell $\{\mathbf{R}_s\}$, $s$ is running over the atoms in the unit cell.
+Other terms are the Debye-Waller factors~$\{\e^{-W_s}\}$ and phase factors $\{\e^{-\i[\mathbf{q}\cdot\mathbf{R}_s]}\}$ with the atomic positions in the unit cell $\{\mathbf{R}_s\}$, $s$ is running over the atoms in the unit cell.
 Direct calculation of the real space structure of the sample from the experimental data is impossible, since the phase factor information is lost due to the absolute square.
 Information about thermal motion of the atoms is encoded in the Debye-Waller factor.
 It is proportional to the mean square atomic displacement of the atoms around their equilibrium position, thus containing information on all phonon modes, but it is not possible to disentangle them.
@@ -69,7 +69,7 @@ To track the phonon dynamics in more detail, namely in energy, momentum and time
 \begin{equation} I_1(\mathbf{q},t) \propto \sum_i \frac{n_{i}(\mathbf{k}, t)+\frac{1}{2}}{\omega_{i}(\mathbf{k}, t)}\,\left| F_{1,i}(\mathbf{q},t) \right|^2 = \sum_i \frac{n_{i}(\mathbf{k},t)+\frac{1}{2}}{\omega_{i}(\mathbf{k},t)}\,\left| \sum_s \e^{-W_s(\mathbf{q},t)} \frac{f_s(\mathbf{q})}{\sqrt{\mu_s}} \left(\mathbf{q}\cdot\mathbf{e}_{i, s}(\mathbf{k}) \right) \right|^2.\label{eq:I1}\end{equation}
 The index of the outer sum $i$ runs over all phonon modes populations $\{n_{i}\}$ and their respective frequencies $\{\omega_{i}\}$.
 $\left| F_{1,i}(\mathbf{q},t) \right|^2$ is the one-phonon structure factor and weighs the contribution of each phonon mode~$i$ to the first order diffuse scattering intensity.
-In full, the one-phonon structure factor is written on the RHS of equation~\ref{eq:I1} with index~$s$ running over the atoms in the unit cell and the Debye-Waller and the atomic form factors from equation~\ref{eq:I0} and the atomic masses $\{\mu_s\}$ and the phononic polarization vectors $\{\mathbf{e}_{i, s}\}$.
+In full, the one-phonon structure factor is written on the RHS of equation~\ref{eq:I1} with index~$s$ running over the atoms in the unit cell and the Debye-Waller and the atomic form factors from equation~\ref{eq:I0} and the atomic masses $\{\mu_s\}$ and the phononic polarization vectors~$\{\mathbf{e}_{i, s}\}$.
 To track the flow of energy in the sample after optical excitation access to the changes in population dynamics across the \ac{BZ} is important.
 In order to derive $\{n_{i}\}$ from the first-order diffuse scattering intensity, one must obtain knowledge of the one-phonon scattering factors and the phonon frequencies.
 A extensive description on how to calculate the $\left| F_{1,i}(\mathbf{q},t) \right|^2$ and finally electron-phonon coupling constants is presented in~\cite{stern2018,renedecotret2019}.
